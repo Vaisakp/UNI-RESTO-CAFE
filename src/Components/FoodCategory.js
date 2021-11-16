@@ -3,8 +3,15 @@ import React from 'react'
 const FoodCategory = () => {
     return (
         <div className='flex items-center justify-between'>
+
             <div className=' flex flex-col'>
-                <div >
+                    <div className='border border-green-500 p-1'>
+                        <div className='bg-green-500 w-4 h-4 rounded-full '>
+                        </div>
+                    </div>
+                
+                <div className='flex' >
+          
                     <h1 className='font-semibold '>Spanish Salad</h1>
                 </div>
                 <p className='font-medium my-2 '>25rs</p>

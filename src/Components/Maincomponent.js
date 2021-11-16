@@ -3,47 +3,11 @@ import FoodCategory from './FoodCategory'
 
 const Maincomponent = () => {
     return (
-        <div className='flex mt-4 justify-center   flex-col 
+        <div className='flex mt-4 justify-center   flex-col overflow-x-scroll
         ' >
 
-           <div className='overflow-x-scroll border-b flex 
+           <div className=' border-b flex 
         border-gray-400'>
-               <button className='text-red-500 p-4 border-b border-red-500 max-w-xl px-2 
-               font-medium text-lg
-               '>Salad and soups</button>
-               <button className='text-red-500 p-4 border-b border-red-500 max-w-xl px-2 
-               font-medium text-lg
-               '>Salad and soups</button>
-               <button className='text-red-500 p-4 border-b border-red-500 max-w-xl px-2 
-               font-medium text-lg
-               '>Salad and soups</button>
-               <button className='text-red-500 p-4 border-b border-red-500 max-w-xl px-2 
-               font-medium text-lg
-               '>Salad and soups</button>
-               <button className='text-red-500 p-4 border-b border-red-500 max-w-xl px-2 
-               font-medium text-lg
-               '>Salad and soups</button>
-               <button className='text-red-500 p-4 border-b border-red-500 max-w-xl px-2 
-               font-medium text-lg
-               '>Salad and soups</button>
-               <button className='text-red-500 p-4 border-b border-red-500 max-w-xl px-2 
-               font-medium text-lg
-               '>Salad and soups</button>
-               <button className='text-red-500 p-4 border-b border-red-500 max-w-xl px-2 
-               font-medium text-lg
-               '>Salad and soups</button>
-               <button className='text-red-500 p-4 border-b border-red-500 max-w-xl px-2 
-               font-medium text-lg
-               '>Salad and soups</button>
-               <button className='text-red-500 p-4 border-b border-red-500 max-w-xl px-2 
-               font-medium text-lg
-               '>Salad and soups</button>
-               <button className='text-red-500 p-4 border-b border-red-500 max-w-xl px-2 
-               font-medium text-lg
-               '>Salad and soups</button>
-               <button className='text-red-500 p-4 border-b border-red-500 max-w-xl px-2 
-               font-medium text-lg
-               '>Salad and soups</button>
                <button className='text-red-500 p-4 border-b border-red-500 max-w-xl px-2 
                font-medium text-lg
                '>Salad and soups</button>
