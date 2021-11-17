@@ -2,18 +2,6 @@ import React,{useState} from 'react'
 
 const FoodCategory = ({itemData,changeitemsincart}) => {
     const [itemQty, setitemQty] = useState(0)
-//     addonCat: (2) [{…}, {…}]
-// dish_Availability: true
-// dish_Type: 2
-// dish_calories: 15
-// dish_currency: "SAR"
-// dish_description: "Fresh spinach, mushrooms, and hard-boiled egg served with warm bacon vinaigrette"
-// dish_id: "100000001"
-// dish_image: "https://i.imgur.com/PoJfqsD.jpg"
-// dish_name: "Spinach Salad"
-// dish_price: 7.95
-// nexturl: "http://snapittapp.snapitt.net/api/menu/30/?org=1010000001&branch_id=1000000001&menuItem=100000001&limit=10&offset=20&lang=en"
-// [[Prototype]]: Object
 const changeQty = (type)=>{
     if(type === 'increment')
     {
@@ -31,7 +19,11 @@ const changeQty = (type)=>{
     return (
       <div className="flex items-center justify-between">
         <div className=" flex  ">
-          <div className="border border-green-500 mr-4 p-1 h-6 w-6 flex items-center justify-center  ">
+          <div className={
+                itemData.dish_Availability
+                  ? "border border-green-500 mr-4 p-1 h-6 w-6 flex items-center justify-center   "
+                  : "border border-red-500 mr-4 p-1 h-6 w-6 flex items-center justify-center   "
+              }>
             <div
               className={
                 itemData.dish_Availability
