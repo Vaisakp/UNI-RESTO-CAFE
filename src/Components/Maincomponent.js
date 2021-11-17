@@ -1,11 +1,22 @@
 import React, { useEffect, useState } from 'react'
 import FoodCategory from './FoodCategory'
 import { data } from '../data'
+import Navbar from './Navbar'
 
 const Maincomponent = () => {
     const [categories, setcategories] = useState([])
     const [Items, setItems] = useState([])
-    console.log(Items)
+    const [itemsincart, setitemsincart] = useState(0)
+    const changeitemsincart = (type)=>{
+            if(type === 'increment')
+            {
+                setitemsincart((prev)=>prev+1)
+            }
+            else
+            {
+                setitemsincart((prev)=>prev-1)
+            }
+    }
     const getData=()=>{
        setcategories(data[0].table_menu_list)
     }
@@ -21,6 +32,8 @@ const Maincomponent = () => {
     }, [])
 
     return (
+        <>
+        <Navbar itemsincart={itemsincart}/>
         <div className='flex mt-4 justify-center   flex-col overflow-x-scroll' >
            <div className=' border-b flex 
         border-gray-400'>
@@ -36,23 +49,17 @@ const Maincomponent = () => {
                return(
                     <div className='mt-4 p-4 border-b 
                          border-gray-400' key={item.dish_id}>
-                         <FoodCategory itemData ={item}/>
+                         <FoodCategory itemData ={item} changeitemsincart={changeitemsincart} />
                     </div>
                )
            })
 
            
            }
-           {/* <div className='mt-4 p-4 border-b 
-        border-gray-400'>
-               <FoodCategory/>
-           </div> */}
-            {/* <div>
-               <button>briyani</button>
-               <FoodCategory/>
-           </div> */}
+
            
         </div>
+    </>
     )
 }
 
