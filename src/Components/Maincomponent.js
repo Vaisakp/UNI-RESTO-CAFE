@@ -47,10 +47,10 @@ const Maincomponent = () => {
   return (
     <div className="mt-4">
       <Navbar itemsincart={itemsincart} />
-      <div className="flex mt-4 justify-center flex-col overflow-x-scroll">
+      <div className=" mt-4 justify-center  ">
         <div
-          className=" border-b flex 
-        border-gray-400"
+          className=" border-b flex  
+        border-gray-400 w-screen overflow-x-scroll "
         >
           {categories &&
             categories.map((item) => {
@@ -59,8 +59,8 @@ const Maincomponent = () => {
                   key={item.menu_category}
                   className={
                     item.menu_category === currentCategory
-                      ? "text-red-500 p-4 border-b  border-red-500 max-w-xl w-64 px-2  font-medium text-lg"
-                      : "text-gray-500 p-4 border-b border-gray-500 max-w-xl w-64 px-2 hover:text-red-500 hover:border-red-500 transition-all duration-300 ease-in-out font-medium text-lg"
+                      ? "px-4 m-2 min-w-max  text-red-500 text-sm  border-red-500  lg:w-64 lg:px-2 hover:text-red-500 hover:border-red-500 transition-all duration-300 ease-in-out font-medium lg:text-lg"
+                      : "px-4 m-2 min-w-max  text-gray-500 text-sm  border-gray-500  lg:w-64 lg:px-2 hover:text-red-500 hover:border-red-500 transition-all duration-300 ease-in-out font-medium lg:text-lg"
                   }
                   onClick={() => {
                     changeItems(item.menu_category);
@@ -71,21 +71,24 @@ const Maincomponent = () => {
               );
             })}
         </div>
-        {Items &&
-          Items.map((item) => {
-            return (
-              <div
-                className="mt-4 p-4 border-b 
+
+        <div>
+          {Items &&
+            Items.map((item) => {
+              return (
+                <div
+                  className="mt-4 p-4 border-b 
                          border-gray-400"
-                key={item.dish_id}
-              >
-                <FoodCategory
-                  itemData={item}
-                  changeitemsincart={changeitemsincart}
-                />
-              </div>
-            );
-          })}
+                  key={item.dish_id}
+                >
+                  <FoodCategory
+                    itemData={item}
+                    changeitemsincart={changeitemsincart}
+                  />
+                </div>
+              );
+            })}
+        </div>
       </div>
     </div>
   );
